@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODELOS
 {
-    internal class Grupos
+    internal class GrupoRepositorio
     {
     }
 }
