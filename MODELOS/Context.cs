@@ -10,6 +10,7 @@ namespace MODELOS
     public class Context : DbContext
     {
         public DbSet<ENTIDADES.Grupo> Grupos { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(@"DataSource=(localdb)\MsSqlServerdb;InitialCatalog=Seguridad;IntegratedSecurity=true");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(@"data source=(localdb)\MSSQLLocalDB;Initial Catalog=SEGURIDAD;Integrated Security=true");
+        
     }
 }

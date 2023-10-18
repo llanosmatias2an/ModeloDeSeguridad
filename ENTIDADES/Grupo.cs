@@ -8,5 +8,11 @@ namespace ENTIDADES
 {
     public class Grupo
     {
+        public string GrupoID { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public bool EstaHabilitado { get; set; }
+
+
     }
 }
