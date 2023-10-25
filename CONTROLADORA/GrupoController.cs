@@ -1,4 +1,5 @@
 ﻿using ENTIDADES;
+using Microsoft.EntityFrameworkCore;
 using MODELOS;
 
 namespace CONTROLADORA
@@ -7,16 +8,16 @@ namespace CONTROLADORA
     {
         private readonly Context _context;
 
-        public GrupoController(Context context)
+        public GrupoController()
         {
-            _context = context;
+            _context = new Context();
         }
 
         public bool agregarGrupo(Grupo grupo)
         {
             _context.Grupos.Add(grupo);
             var insert = _context.SaveChanges();
-            if (insert == 1) return true;
+            if (insert > 0) return true;
             return false;
         }
 
@@ -24,7 +25,7 @@ namespace CONTROLADORA
         {
             _context.Grupos.Remove(grupo);
             var delete = _context.SaveChanges();
-            if (delete == 1) return true;
+            if (delete > 0) return true;
             return false;
         }
 
@@ -32,7 +33,7 @@ namespace CONTROLADORA
         {
             _context.Grupos.Update(grupo);
             var update = _context.SaveChanges();
-            if (update == 1) return true;
+            if (update > 0) return true;
             return false;
         }
 
@@ -40,7 +41,10 @@ namespace CONTROLADORA
         {
             return _context.Grupos.ToList();
         }
-
-
+        
+        public Grupo listarGrupo(string nombre)
+        {
+            return _context.Grupos.First(x => x.Nombre == nombre);
+        }
     }
 }
