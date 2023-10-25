@@ -8,14 +8,11 @@ namespace ENTIDADES
 {
     public class Grupo
     {
-        public Grupo(string nombre, string descripcion, bool habilitado)
+        public Grupo()
         {
-            Nombre = nombre;
-            Descripcion = descripcion;
-            EstaHabilitado = habilitado;
         }
 
-        public string GrupoID { get; set; }
+        public int GrupoId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public bool EstaHabilitado { get; set; }

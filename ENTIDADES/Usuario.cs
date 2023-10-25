@@ -8,7 +8,7 @@ namespace ENTIDADES
 {
     public class Usuario
     {
-        public string UsuarioID { get; set; }
+        public int UsuarioId { get; set; }
         public int CantidadIntentos { get; }
         private string clave;
         public string Email { get; set; }

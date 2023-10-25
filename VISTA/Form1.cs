@@ -37,8 +37,10 @@ namespace VISTA
             if (!string.IsNullOrWhiteSpace(nombre) ||
                 !string.IsNullOrWhiteSpace(descripcion))
             {
-
-                Grupo grupo = new Grupo(nombre, descripcion, habilitado);
+                Grupo grupo = new Grupo();
+                grupo.Descripcion = descripcion;
+                grupo.Nombre = nombre;
+                grupo.EstaHabilitado = habilitado;
                 var result = grupoController.agregarGrupo(grupo);
                 if (result)
                 {
