@@ -42,7 +42,7 @@ namespace VISTA
                 var result = grupoController.agregarGrupo(grupo);
                 if (result)
                 {
-                    MessageBox.Show("Grupo agregado correctamente.");
+                    MessageBox.Show("Grupo agregado correctamente");
                 } else
                 {
                     MessageBox.Show("Error al agregar el grupo.");
